@@ -1,0 +1,72 @@
+//
+//  PrefixHeader.pch
+//  CardGenerationTool
+//
+//  Created by 张玺臣 on 2019/10/11.
+//  Copyright © 2019 张玺臣. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#define DIRECTORY_ADDRESS_BG        @"DirectoryAddress-bg"
+#define DIRECTORY_ADDRESS_LEFTUP    @"DirectoryAddress-leftup"
+#define DIRECTORY_ADDRESS_RIGHTUP   @"DirectoryAddress-rightup"
+#define DIRECTORY_ADDRESS_LEFTDOWN  @"DirectoryAddress-leftdown"
+#define DIRECTORY_ADDRESS_RIGHTDOWN @"DirectoryAddress-rightdown"
+
+#define FRAME_BG                    @"frame-bg"
+#define FRAME_LEFTUP                @"frame-leftup"
+#define FRAME_RIGHTUP               @"frame-rightup"
+#define FRAME_LEFTDOWN              @"frame-leftdown"
+#define FRAME_RIGHTDOWN             @"frame-rightdown"
+
+
+#define TARGET_FOLDER_PATH          @"targetFolder-path"
+#define SAVE_FOLDER_PATH            @"saveFolder-path"
+
+
+// 全局提示弹窗
+#import "AlertManager.h"
+// 全局文件管理器
+#import "FileManager.h"
+
+//image
+#import "ZLImage.h"
+#import "CGTImage.h"
+
+//size
+#define CARD_SIZE       NSMakeSize(220, 300)
+#define FILE_SAVE_PATH  @"/Users/zhangxichen/Desktop/"
+
+
+// 全局宏声明
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
+
+//========================================
+//         NSLog 日志相关
+//========================================
+//对NSLog进行增强，可以定位到哪个类哪一行数据
+#if DEBUG
+#define NSLog(format, ...) do {                                             \
+fprintf(stderr, "<%s : %d> %s \%s\n",                                           \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__,[[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String]);                                                        \
+fprintf(stderr, "-------\n");                                               \
+} while (0)
+#define NSLogRect(rect) NSLog(@"%s:{\n \tx:%.4f, \ty:%.4f,\n \tw:%.4f, \th:%.4f\n}", #rect, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)
+#define NSLogSize(size) NSLog(@"%s:{\n \tw:%.4f, \th:%.4f\n}", #size, size.width, size.height)
+#define NSLogPoint(point) NSLog(@"%s:{ \tx:%.4f, \ty:%.4f\n}", #point, point.x, point.y)
+
+#else
+#define NSLog(FORMAT, ...) nil
+#define NSLogRect(rect) nil
+#define NSLogSize(size) nil
+#define NSLogPoint(point) nil
+#endif
+
+
+
+#endif /* PrefixHeader_pch */

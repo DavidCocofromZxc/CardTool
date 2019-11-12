@@ -1,0 +1,700 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		900277A923570AB900ECF128 /* CGTImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 900277A823570AB900ECF128 /* CGTImage.m */; };
+		90202B1B2359643900CB3647 /* DropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90202B1A2359643900CB3647 /* DropView.m */; };
+		90202B1E2359659900CB3647 /* NSView+Drop.m in Sources */ = {isa = PBXBuildFile; fileRef = 90202B1D2359659900CB3647 /* NSView+Drop.m */; };
+		9038CE4E2355BE9B0034106D /* ZLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9038CE4C2355BE9B0034106D /* ZLImage.m */; };
+		90CC0A482355A23800128353 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CC0A472355A23800128353 /* FileManager.m */; };
+		90F153DA234ED2FE00A76057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F153D9234ED2FE00A76057 /* AppDelegate.m */; };
+		90F153DD234ED2FE00A76057 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F153DC234ED2FE00A76057 /* ViewController.m */; };
+		90F153DF234ED2FF00A76057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F153DE234ED2FF00A76057 /* Assets.xcassets */; };
+		90F153E2234ED2FF00A76057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90F153E0234ED2FF00A76057 /* Main.storyboard */; };
+		90F153E5234ED2FF00A76057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F153E4234ED2FF00A76057 /* main.m */; };
+		90F153F0234ED2FF00A76057 /* CardGenerationToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F153EF234ED2FF00A76057 /* CardGenerationToolTests.m */; };
+		90F153FB234ED2FF00A76057 /* CardGenerationToolUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F153FA234ED2FF00A76057 /* CardGenerationToolUITests.m */; };
+		90F1540D234F014400A76057 /* ExhibitionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1540C234F014400A76057 /* ExhibitionView.m */; };
+		90F154102350314700A76057 /* AlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F1540F2350314700A76057 /* AlertManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90F153EC234ED2FF00A76057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90F153CD234ED2FE00A76057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90F153D4234ED2FE00A76057;
+			remoteInfo = CardGenerationTool;
+		};
+		90F153F7234ED2FF00A76057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90F153CD234ED2FE00A76057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90F153D4234ED2FE00A76057;
+			remoteInfo = CardGenerationTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		900277A723570AB900ECF128 /* CGTImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGTImage.h; sourceTree = "<group>"; };
+		900277A823570AB900ECF128 /* CGTImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGTImage.m; sourceTree = "<group>"; };
+		90202B192359643900CB3647 /* DropView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropView.h; sourceTree = "<group>"; };
+		90202B1A2359643900CB3647 /* DropView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropView.m; sourceTree = "<group>"; };
+		90202B1C2359659900CB3647 /* NSView+Drop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView+Drop.h"; sourceTree = "<group>"; };
+		90202B1D2359659900CB3647 /* NSView+Drop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSView+Drop.m"; sourceTree = "<group>"; };
+		9038CE4C2355BE9B0034106D /* ZLImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLImage.m; sourceTree = "<group>"; };
+		9038CE4D2355BE9B0034106D /* ZLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLImage.h; sourceTree = "<group>"; };
+		904353C22350632500F2B3DD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		90CC0A462355A23800128353 /* FileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		90CC0A472355A23800128353 /* FileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		90F153D5234ED2FE00A76057 /* CardGenerationTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGenerationTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F153D8234ED2FE00A76057 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		90F153D9234ED2FE00A76057 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		90F153DB234ED2FE00A76057 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		90F153DC234ED2FE00A76057 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		90F153DE234ED2FF00A76057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90F153E1234ED2FF00A76057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90F153E3234ED2FF00A76057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F153E4234ED2FF00A76057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90F153E6234ED2FF00A76057 /* CardGenerationTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CardGenerationTool.entitlements; sourceTree = "<group>"; };
+		90F153EB234ED2FF00A76057 /* CardGenerationToolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardGenerationToolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F153EF234ED2FF00A76057 /* CardGenerationToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardGenerationToolTests.m; sourceTree = "<group>"; };
+		90F153F1234ED2FF00A76057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F153F6234ED2FF00A76057 /* CardGenerationToolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardGenerationToolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F153FA234ED2FF00A76057 /* CardGenerationToolUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardGenerationToolUITests.m; sourceTree = "<group>"; };
+		90F153FC234ED2FF00A76057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90F1540B234F014400A76057 /* ExhibitionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExhibitionView.h; sourceTree = "<group>"; };
+		90F1540C234F014400A76057 /* ExhibitionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExhibitionView.m; sourceTree = "<group>"; };
+		90F1540E2350314700A76057 /* AlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
+		90F1540F2350314700A76057 /* AlertManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90F153D2234ED2FE00A76057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F153E8234ED2FF00A76057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F153F3234ED2FF00A76057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		900277A623570AAB00ECF128 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				900277A723570AB900ECF128 /* CGTImage.h */,
+				900277A823570AB900ECF128 /* CGTImage.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		901B6C1A2351B5DC007FE3C6 /* SingleCase */ = {
+			isa = PBXGroup;
+			children = (
+				90F1540E2350314700A76057 /* AlertManager.h */,
+				90F1540F2350314700A76057 /* AlertManager.m */,
+				90CC0A462355A23800128353 /* FileManager.h */,
+				90CC0A472355A23800128353 /* FileManager.m */,
+			);
+			path = SingleCase;
+			sourceTree = "<group>";
+		};
+		9038CE4A2355BE2A0034106D /* third */ = {
+			isa = PBXGroup;
+			children = (
+				9038CE4D2355BE9B0034106D /* ZLImage.h */,
+				9038CE4C2355BE9B0034106D /* ZLImage.m */,
+			);
+			path = third;
+			sourceTree = "<group>";
+		};
+		9038CE4B2355BE3F0034106D /* control */ = {
+			isa = PBXGroup;
+			children = (
+				90F1540B234F014400A76057 /* ExhibitionView.h */,
+				90F1540C234F014400A76057 /* ExhibitionView.m */,
+				90202B192359643900CB3647 /* DropView.h */,
+				90202B1A2359643900CB3647 /* DropView.m */,
+				90202B1C2359659900CB3647 /* NSView+Drop.h */,
+				90202B1D2359659900CB3647 /* NSView+Drop.m */,
+			);
+			path = control;
+			sourceTree = "<group>";
+		};
+		904353C32350648200F2B3DD /* configure */ = {
+			isa = PBXGroup;
+			children = (
+				904353C22350632500F2B3DD /* PrefixHeader.pch */,
+				90F153E3234ED2FF00A76057 /* Info.plist */,
+			);
+			path = configure;
+			sourceTree = "<group>";
+		};
+		904353C4235064B100F2B3DD /* custom */ = {
+			isa = PBXGroup;
+			children = (
+				900277A623570AAB00ECF128 /* model */,
+				9038CE4B2355BE3F0034106D /* control */,
+				9038CE4A2355BE2A0034106D /* third */,
+				901B6C1A2351B5DC007FE3C6 /* SingleCase */,
+			);
+			path = custom;
+			sourceTree = "<group>";
+		};
+		90F153CC234ED2FE00A76057 = {
+			isa = PBXGroup;
+			children = (
+				90F153D7234ED2FE00A76057 /* CardGenerationTool */,
+				90F153EE234ED2FF00A76057 /* CardGenerationToolTests */,
+				90F153F9234ED2FF00A76057 /* CardGenerationToolUITests */,
+				90F153D6234ED2FE00A76057 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90F153D6234ED2FE00A76057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90F153D5234ED2FE00A76057 /* CardGenerationTool.app */,
+				90F153EB234ED2FF00A76057 /* CardGenerationToolTests.xctest */,
+				90F153F6234ED2FF00A76057 /* CardGenerationToolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90F153D7234ED2FE00A76057 /* CardGenerationTool */ = {
+			isa = PBXGroup;
+			children = (
+				904353C4235064B100F2B3DD /* custom */,
+				904353C32350648200F2B3DD /* configure */,
+				90F15409234ED35100A76057 /* res */,
+				90F15408234ED34600A76057 /* main */,
+				90F1540A234F00D900A76057 /* base */,
+			);
+			path = CardGenerationTool;
+			sourceTree = "<group>";
+		};
+		90F153EE234ED2FF00A76057 /* CardGenerationToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				90F153EF234ED2FF00A76057 /* CardGenerationToolTests.m */,
+				90F153F1234ED2FF00A76057 /* Info.plist */,
+			);
+			path = CardGenerationToolTests;
+			sourceTree = "<group>";
+		};
+		90F153F9234ED2FF00A76057 /* CardGenerationToolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				90F153FA234ED2FF00A76057 /* CardGenerationToolUITests.m */,
+				90F153FC234ED2FF00A76057 /* Info.plist */,
+			);
+			path = CardGenerationToolUITests;
+			sourceTree = "<group>";
+		};
+		90F15408234ED34600A76057 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				90F153D8234ED2FE00A76057 /* AppDelegate.h */,
+				90F153D9234ED2FE00A76057 /* AppDelegate.m */,
+				90F153DB234ED2FE00A76057 /* ViewController.h */,
+				90F153DC234ED2FE00A76057 /* ViewController.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		90F15409234ED35100A76057 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				90F153DE234ED2FF00A76057 /* Assets.xcassets */,
+				90F153E0234ED2FF00A76057 /* Main.storyboard */,
+				90F153E4234ED2FF00A76057 /* main.m */,
+				90F153E6234ED2FF00A76057 /* CardGenerationTool.entitlements */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		90F1540A234F00D900A76057 /* base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90F153D4234ED2FE00A76057 /* CardGenerationTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90F153FF234ED2FF00A76057 /* Build configuration list for PBXNativeTarget "CardGenerationTool" */;
+			buildPhases = (
+				90F153D1234ED2FE00A76057 /* Sources */,
+				90F153D2234ED2FE00A76057 /* Frameworks */,
+				90F153D3234ED2FE00A76057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardGenerationTool;
+			productName = CardGenerationTool;
+			productReference = 90F153D5234ED2FE00A76057 /* CardGenerationTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90F153EA234ED2FF00A76057 /* CardGenerationToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90F15402234ED2FF00A76057 /* Build configuration list for PBXNativeTarget "CardGenerationToolTests" */;
+			buildPhases = (
+				90F153E7234ED2FF00A76057 /* Sources */,
+				90F153E8234ED2FF00A76057 /* Frameworks */,
+				90F153E9234ED2FF00A76057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90F153ED234ED2FF00A76057 /* PBXTargetDependency */,
+			);
+			name = CardGenerationToolTests;
+			productName = CardGenerationToolTests;
+			productReference = 90F153EB234ED2FF00A76057 /* CardGenerationToolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		90F153F5234ED2FF00A76057 /* CardGenerationToolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90F15405234ED2FF00A76057 /* Build configuration list for PBXNativeTarget "CardGenerationToolUITests" */;
+			buildPhases = (
+				90F153F2234ED2FF00A76057 /* Sources */,
+				90F153F3234ED2FF00A76057 /* Frameworks */,
+				90F153F4234ED2FF00A76057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90F153F8234ED2FF00A76057 /* PBXTargetDependency */,
+			);
+			name = CardGenerationToolUITests;
+			productName = CardGenerationToolUITests;
+			productReference = 90F153F6234ED2FF00A76057 /* CardGenerationToolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90F153CD234ED2FE00A76057 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "张玺臣";
+				TargetAttributes = {
+					90F153D4234ED2FE00A76057 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
+					};
+					90F153EA234ED2FF00A76057 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 90F153D4234ED2FE00A76057;
+					};
+					90F153F5234ED2FF00A76057 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 90F153D4234ED2FE00A76057;
+					};
+				};
+			};
+			buildConfigurationList = 90F153D0234ED2FE00A76057 /* Build configuration list for PBXProject "CardGenerationTool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90F153CC234ED2FE00A76057;
+			productRefGroup = 90F153D6234ED2FE00A76057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90F153D4234ED2FE00A76057 /* CardGenerationTool */,
+				90F153EA234ED2FF00A76057 /* CardGenerationToolTests */,
+				90F153F5234ED2FF00A76057 /* CardGenerationToolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90F153D3234ED2FE00A76057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F153DF234ED2FF00A76057 /* Assets.xcassets in Resources */,
+				90F153E2234ED2FF00A76057 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F153E9234ED2FF00A76057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F153F4234ED2FF00A76057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90F153D1234ED2FE00A76057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F153DD234ED2FE00A76057 /* ViewController.m in Sources */,
+				90202B1B2359643900CB3647 /* DropView.m in Sources */,
+				9038CE4E2355BE9B0034106D /* ZLImage.m in Sources */,
+				90F1540D234F014400A76057 /* ExhibitionView.m in Sources */,
+				90F153E5234ED2FF00A76057 /* main.m in Sources */,
+				90F153DA234ED2FE00A76057 /* AppDelegate.m in Sources */,
+				90F154102350314700A76057 /* AlertManager.m in Sources */,
+				900277A923570AB900ECF128 /* CGTImage.m in Sources */,
+				90202B1E2359659900CB3647 /* NSView+Drop.m in Sources */,
+				90CC0A482355A23800128353 /* FileManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F153E7234ED2FF00A76057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F153F0234ED2FF00A76057 /* CardGenerationToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F153F2234ED2FF00A76057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F153FB234ED2FF00A76057 /* CardGenerationToolUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90F153ED234ED2FF00A76057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90F153D4234ED2FE00A76057 /* CardGenerationTool */;
+			targetProxy = 90F153EC234ED2FF00A76057 /* PBXContainerItemProxy */;
+		};
+		90F153F8234ED2FF00A76057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90F153D4234ED2FE00A76057 /* CardGenerationTool */;
+			targetProxy = 90F153F7234ED2FF00A76057 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90F153E0234ED2FF00A76057 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90F153E1234ED2FF00A76057 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90F153FD234ED2FF00A76057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		90F153FE234ED2FF00A76057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		90F15400234ED2FF00A76057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZLA5U3LJDE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CardGenerationTool/configure/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/CardGenerationTool/configure/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxc.likeChess.CardGenerationTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		90F15401234ED2FF00A76057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZLA5U3LJDE;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CardGenerationTool/configure/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/CardGenerationTool/configure/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxc.likeChess.CardGenerationTool;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		90F15403234ED2FF00A76057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZLA5U3LJDE;
+				INFOPLIST_FILE = CardGenerationToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxc.likeChess.CardGenerationToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardGenerationTool.app/Contents/MacOS/CardGenerationTool";
+			};
+			name = Debug;
+		};
+		90F15404234ED2FF00A76057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZLA5U3LJDE;
+				INFOPLIST_FILE = CardGenerationToolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxc.likeChess.CardGenerationToolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CardGenerationTool.app/Contents/MacOS/CardGenerationTool";
+			};
+			name = Release;
+		};
+		90F15406234ED2FF00A76057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZLA5U3LJDE;
+				INFOPLIST_FILE = CardGenerationToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxc.likeChess.CardGenerationToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CardGenerationTool;
+			};
+			name = Debug;
+		};
+		90F15407234ED2FF00A76057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZLA5U3LJDE;
+				INFOPLIST_FILE = CardGenerationToolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zxc.likeChess.CardGenerationToolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CardGenerationTool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90F153D0234ED2FE00A76057 /* Build configuration list for PBXProject "CardGenerationTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F153FD234ED2FF00A76057 /* Debug */,
+				90F153FE234ED2FF00A76057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90F153FF234ED2FF00A76057 /* Build configuration list for PBXNativeTarget "CardGenerationTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F15400234ED2FF00A76057 /* Debug */,
+				90F15401234ED2FF00A76057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90F15402234ED2FF00A76057 /* Build configuration list for PBXNativeTarget "CardGenerationToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F15403234ED2FF00A76057 /* Debug */,
+				90F15404234ED2FF00A76057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90F15405234ED2FF00A76057 /* Build configuration list for PBXNativeTarget "CardGenerationToolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F15406234ED2FF00A76057 /* Debug */,
+				90F15407234ED2FF00A76057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90F153CD234ED2FE00A76057 /* Project object */;
+}
