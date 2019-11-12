@@ -11,16 +11,16 @@
 
 
 #define DIRECTORY_ADDRESS_BG        @"DirectoryAddress-bg"
-#define DIRECTORY_ADDRESS_LEFTUP    @"DirectoryAddress-leftup"
-#define DIRECTORY_ADDRESS_RIGHTUP   @"DirectoryAddress-rightup"
-#define DIRECTORY_ADDRESS_LEFTDOWN  @"DirectoryAddress-leftdown"
-#define DIRECTORY_ADDRESS_RIGHTDOWN @"DirectoryAddress-rightdown"
+#define DIRECTORY_ADDRESS_A         @"DirectoryAddress-A"
+#define DIRECTORY_ADDRESS_B         @"DirectoryAddress-B"
+#define DIRECTORY_ADDRESS_C         @"DirectoryAddress-C"
+#define DIRECTORY_ADDRESS_D         @"DirectoryAddress-D"
 
 #define FRAME_BG                    @"frame-bg"
-#define FRAME_LEFTUP                @"frame-leftup"
-#define FRAME_RIGHTUP               @"frame-rightup"
-#define FRAME_LEFTDOWN              @"frame-leftdown"
-#define FRAME_RIGHTDOWN             @"frame-rightdown"
+#define FRAME_A                     @"frame-A"
+#define FRAME_B                     @"frame-B"
+#define FRAME_C                     @"frame-C"
+#define FRAME_D                     @"frame-D"
 
 
 #define TARGET_FOLDER_PATH          @"targetFolder-path"

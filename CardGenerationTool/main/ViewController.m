@@ -48,15 +48,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.previewView.wantsLayer = YES;
     self.previewView.layer.borderWidth = 1.f;
     self.previewView.layer.borderColor = NSColor.grayColor.CGColor;
     
     self.bgView.key = @"bg";
-    self.leftupView.key = @"leftup";
-    self.rightupView.key = @"rightup";
-    self.leftdownView.key = @"leftdown";
-    self.rightdownView.key = @"rightdown";
+    self.leftupView.key = @"A";
+    self.rightupView.key = @"B";
+    self.leftdownView.key = @"C";
+    self.rightdownView.key = @"D";
+    
     self.bgView.delegate = self;
     self.leftupView.delegate = self;
     self.rightupView.delegate = self;
@@ -64,12 +66,10 @@
     self.rightdownView.delegate = self;
     
     [self addObserber];
+    //
+    [self textFieldHandle];
     
-    [self.leftupView setLabelString:@"A"];
-    [self.rightupView setLabelString:@"B"];
-    [self.leftdownView setLabelString:@"C"];
-    [self.rightdownView setLabelString:@"D"];
-    [self.bgView setLabelString:@"bg"];
+    
     
     //还原上次的地址
     NSString *scPath = [[NSUserDefaults standardUserDefaults] objectForKey:TARGET_FOLDER_PATH];
@@ -80,10 +80,10 @@
     self.tfSavePath.stringValue = savePath;
     
     //还原上次记录的位置
-    NSString *frameleftup = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_LEFTUP];
-    NSString *frameleftdown = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_LEFTDOWN];
-    NSString *framerightup = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_RIGHTUP];
-    NSString *framerightdown = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_RIGHTDOWN];
+    NSString *frameleftup = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_A];
+    NSString *frameleftdown = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_C];
+    NSString *framerightup = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_B];
+    NSString *framerightdown = [[NSUserDefaults standardUserDefaults] objectForKey:FRAME_D];
     if(frameleftup){
         NSRect frame = NSRectFromString(frameleftup);
         self.leftupView.frame = frame;
@@ -133,29 +133,29 @@
                                                options:NSKeyValueObservingOptionNew
                                                context:NULL];
     [[NSUserDefaults standardUserDefaults] addObserver:self
-                                            forKeyPath:DIRECTORY_ADDRESS_LEFTUP
+                                            forKeyPath:DIRECTORY_ADDRESS_A
                                                options:NSKeyValueObservingOptionNew
                                                context:NULL];
     [[NSUserDefaults standardUserDefaults] addObserver:self
-                                            forKeyPath:DIRECTORY_ADDRESS_LEFTDOWN
+                                            forKeyPath:DIRECTORY_ADDRESS_C
                                                options:NSKeyValueObservingOptionNew
                                                context:NULL];
     [[NSUserDefaults standardUserDefaults] addObserver:self
-                                            forKeyPath:DIRECTORY_ADDRESS_RIGHTUP
+                                            forKeyPath:DIRECTORY_ADDRESS_B
                                                options:NSKeyValueObservingOptionNew
                                                context:NULL];
     [[NSUserDefaults standardUserDefaults] addObserver:self
-                                            forKeyPath:DIRECTORY_ADDRESS_RIGHTDOWN
+                                            forKeyPath:DIRECTORY_ADDRESS_D
                                                options:NSKeyValueObservingOptionNew
                                                context:NULL];
 }
 
 - (void)removeObserber;{
     [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_BG];
-    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_LEFTUP];
-    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_LEFTDOWN];
-    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_RIGHTUP];
-    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_RIGHTDOWN];
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_A];
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_C];
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_B];
+    [[NSUserDefaults standardUserDefaults] removeObserver:self forKeyPath:DIRECTORY_ADDRESS_D];
 }
 
 //实现监听
@@ -176,8 +176,8 @@
             }];
         };
     }
-    if ([keyPath isEqual:DIRECTORY_ADDRESS_LEFTUP]) {
-        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_LEFTUP];
+    if ([keyPath isEqual:DIRECTORY_ADDRESS_A]) {
+        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_A];
         if( path && ![path isEqualToString:@""]){
             [[FileManager sharedInstance] queryFile:path success:^(NSFileManager * _Nonnull manager){
                 NSImage *img = [[NSImage alloc]initWithContentsOfFile:path];
@@ -187,12 +187,12 @@
                                                        title:@""
                                                         text:@"目标文件已被移除或已损坏"];
                 weakSelf.leftupTextField.stringValue = @"";
-                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_LEFTUP];
+                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_A];
             }];
         };
     }
-    if ([keyPath isEqual:DIRECTORY_ADDRESS_LEFTDOWN]) {
-        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_LEFTDOWN];
+    if ([keyPath isEqual:DIRECTORY_ADDRESS_C]) {
+        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_C];
         if( path && ![path isEqualToString:@""]){
             [[FileManager sharedInstance] queryFile:path success:^(NSFileManager * _Nonnull manager){
                 NSImage *img = [[NSImage alloc]initWithContentsOfFile:path];
@@ -202,12 +202,12 @@
                                                        title:@""
                                                         text:@"目标文件已被移除或已损坏"];
                 weakSelf.leftdownTextField.stringValue = @"";
-                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_LEFTDOWN];
+                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_C];
             }];
         };
     }
-    if ([keyPath isEqual:DIRECTORY_ADDRESS_RIGHTDOWN]) {
-        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_RIGHTDOWN];
+    if ([keyPath isEqual:DIRECTORY_ADDRESS_B]) {
+        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_B];
         if( path && ![path isEqualToString:@""]){
             [[FileManager sharedInstance] queryFile:path success:^(NSFileManager * _Nonnull manager){
                 NSImage *img = [[NSImage alloc]initWithContentsOfFile:path];
@@ -217,12 +217,12 @@
                                                        title:@""
                                                         text:@"目标文件已被移除或已损坏"];
                 weakSelf.rightdownTextField.stringValue = @"";
-                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_RIGHTDOWN];
+                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_B];
             }];
         };
     }
-    if ([keyPath isEqual:DIRECTORY_ADDRESS_RIGHTUP]) {
-        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_RIGHTUP];
+    if ([keyPath isEqual:DIRECTORY_ADDRESS_D]) {
+        NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_D];
         if( path && ![path isEqualToString:@""]){
             [[FileManager sharedInstance] queryFile:path success:^(NSFileManager * _Nonnull manager){
                 NSImage *img = [[NSImage alloc]initWithContentsOfFile:path];
@@ -232,7 +232,7 @@
                                                        title:@""
                                                         text:@"目标文件已被移除或已损坏"];
                 weakSelf.rightupTextField.stringValue = @"";
-                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_RIGHTUP];
+                [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_D];
             }];
         };
     }
@@ -301,9 +301,6 @@
     }
 }
 
-
-
-
 //预览Action
 - (IBAction)showCompleteImage:(id)sender {
     [self.previewView setImage:[self imageComPleteImage:self.bgimage]];
@@ -313,10 +310,10 @@
     
         CGSize conSize = NSMakeSize(30, 30);
         //获取记录的位置
-        CGRect luframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_LEFTUP]);
-        CGRect ldframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_LEFTDOWN]);
-        CGRect ruframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_RIGHTUP]);
-        CGRect rdframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_RIGHTDOWN]);
+        CGRect luframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_A]);
+        CGRect ldframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_C]);
+        CGRect ruframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_B]);
+        CGRect rdframe = NSRectFromString([[NSUserDefaults standardUserDefaults]objectForKey:FRAME_D]);
         //计算居中时产生的缝隙差
         CGPoint bgPoint = [ZLImage getCenteredDisplayPointInSize:CARD_SIZE withSize:self.bgimage.size];
         CGPoint leftupPoint = [ZLImage getCenteredDisplayPointInSize:conSize withSize:self.leftupimage.size];
@@ -366,7 +363,7 @@
         }];
     };
     //leftup
-    NSString *path2 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_LEFTUP];
+    NSString *path2 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_A];
     if( path2 && ![path2 isEqualToString:@""]){
         [[FileManager sharedInstance] queryFile:path2 success:^(NSFileManager * _Nonnull manager){
             NSImage *img = [[NSImage alloc]initWithContentsOfFile:path2];
@@ -378,10 +375,10 @@
                                                    title:@""
                                                     text:@"目标文件已被移除或已损坏"];
             weakSelf.leftupTextField.stringValue = @"";
-            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_LEFTUP];
+            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_A];
         }];
     };
-    NSString *path3 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_LEFTDOWN];
+    NSString *path3 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_C];
     if( path3 && ![path3 isEqualToString:@""]){
         [[FileManager sharedInstance] queryFile:path3 success:^(NSFileManager * _Nonnull manager){
             NSImage *img = [[NSImage alloc]initWithContentsOfFile:path3];
@@ -393,10 +390,10 @@
                                                    title:@""
                                                     text:@"目标文件已被移除或已损坏"];
             weakSelf.leftdownTextField.stringValue = @"";
-            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_LEFTDOWN];
+            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_C];
         }];
     };
-    NSString *path4 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_RIGHTDOWN];
+    NSString *path4 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_B];
     if( path4 && ![path4 isEqualToString:@""]){
         [[FileManager sharedInstance] queryFile:path4 success:^(NSFileManager * _Nonnull manager){
             NSImage *img = [[NSImage alloc]initWithContentsOfFile:path4];
@@ -408,10 +405,10 @@
                                                    title:@""
                                                     text:@"目标文件已被移除或已损坏"];
             weakSelf.rightdownTextField.stringValue = @"";
-            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_RIGHTDOWN];
+            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_B];
         }];
     };
-    NSString *path5 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_RIGHTUP];
+    NSString *path5 = [[NSUserDefaults standardUserDefaults] objectForKey:DIRECTORY_ADDRESS_D];
     if( path5 && ![path5 isEqualToString:@""]){
         [[FileManager sharedInstance] queryFile:path5 success:^(NSFileManager * _Nonnull manager){
             NSImage *img = [[NSImage alloc]initWithContentsOfFile:path5];
@@ -423,7 +420,7 @@
                                                    title:@"" 
                                                     text:@"目标文件已被移除或已损坏"];
             weakSelf.rightupTextField.stringValue = @"";
-            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_RIGHTUP];
+            [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_D];
         }];
     };
 }
@@ -432,13 +429,14 @@
 - (void)receiveUrlMessage:(NSString *)url key:(NSString *)key;{
     [[NSUserDefaults standardUserDefaults] setObject:url
                                               forKey:[@"DirectoryAddress-" stringByAppendingString:key]];
+    //可以加
 }
 
 - (void)touchMoveData:(NSString *)str key:(NSString *)key;{
     CGRect frame = NSRectFromString(str);
     NSString *x = [NSString stringWithFormat:@"%.1f",frame.origin.x];
     NSString *y = [NSString stringWithFormat:@"%.1f",frame.origin.y];
-    self.textView.stringValue = [key stringByAppendingFormat:@": \nX:%@\nY:%@",x,y];
+    self.textView.stringValue = [key stringByAppendingFormat:@": 绝对位置\nX:%@\nY:%@",x,y];
     [[NSUserDefaults standardUserDefaults] setObject:str
                                               forKey:[@"frame-" stringByAppendingString:key]];
 }
@@ -461,6 +459,33 @@
         }
     }
     return list;
+}
+
+#pragma -mark textField sth
+
+- (void)textFieldHandle{
+    self.bgPathTextField.enabled = NO;
+    self.leftupTextField.enabled = NO;
+    self.rightupTextField.enabled = NO;
+    self.leftdownTextField.enabled = NO;
+    self.rightdownTextField.enabled = NO;
+    [self.bgPathTextField setFont:[NSFont systemFontOfSize:12.f]];
+    [self.leftupTextField setFont:[NSFont systemFontOfSize:12.f]];
+    [self.rightupTextField setFont:[NSFont systemFontOfSize:12.f]];
+    [self.leftdownTextField setFont:[NSFont systemFontOfSize:12.f]];
+    [self.rightdownTextField setFont:[NSFont systemFontOfSize:12.f]];
+}
+
+//
+- (IBAction)emptyBgPathAction:(id)sender {
+}
+- (IBAction)emptyAPathAction:(id)sender {
+}
+- (IBAction)emptyBPathAction:(id)sender {
+}
+- (IBAction)emptyCPathAction:(id)sender {
+}
+- (IBAction)emptyDPathAction:(id)sender {
 }
 
 

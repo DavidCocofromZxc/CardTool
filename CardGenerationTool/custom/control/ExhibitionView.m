@@ -230,6 +230,11 @@
 
 #pragma -mark get &set
 
+- (void)setKey:(NSString *)key;{
+    _key = key;
+    [self setLabelString:key];
+}
+
 - (NSTextField *)label;{
     if(!_label){
         _label = [[NSTextField alloc]initWithFrame:CGRectMake(0, 0, 14, 14)];
