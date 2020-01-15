@@ -478,6 +478,8 @@
 
 //
 - (IBAction)emptyBgPathAction:(id)sender {
+//    weakSelf.bgPathTextField.stringValue = @"";
+    [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:DIRECTORY_ADDRESS_BG];
 }
 - (IBAction)emptyAPathAction:(id)sender {
 }
