@@ -18,6 +18,7 @@
         sharedInstance = [[AlertManager alloc] init];
     });
     return sharedInstance;
+    //test
 }
 
 -(void)showWarnAlert:(NSView *)targerView
